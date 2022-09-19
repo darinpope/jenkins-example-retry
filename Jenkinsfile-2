@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+  options {
+    retry(3)
+  }
+  stages {
+    stage('stage 1') {
+      steps {
+        sh 'echo stage 1'
+      }
+    }
+    stage('stage 2') {
+      steps {
+        sh './test-script.sh'
+      }
+    }
+    stage('stage 3') {
+      steps {
+        sh 'echo stage 3'
+      }
+    }
+  }
+}
