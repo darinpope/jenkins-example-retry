@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options {
-    retry(3)
+    retry(5)
   }
   stages {
     stage('stage 1') {

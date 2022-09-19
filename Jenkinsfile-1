@@ -8,7 +8,7 @@ pipeline {
     }
     stage('stage 2') {
       steps {
-        retry(3) {
+        retry(5) {
           sh './test-script.sh'
         }
       }
